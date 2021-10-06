@@ -5,7 +5,7 @@ using UnityEngine;
 
 public struct Params
 {
-    public static string SnapZoneTag = "snapzone";
+    public static string PlaceHolderTag = "placeholder";
 }
 
 public class Utility : MonoBehaviour

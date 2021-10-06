@@ -30,7 +30,7 @@ public class SnapIntoPlace : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.tag == Params.SnapZoneTag)
+        if(other.tag == Params.PlaceHolderTag)
             Snap();
     }
 }
