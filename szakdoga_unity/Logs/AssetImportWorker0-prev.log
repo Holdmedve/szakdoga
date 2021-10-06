@@ -15,7 +15,7 @@ D:/dev/szakdoga/szakdoga_unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58428
+51351
 Successfully changed project path to: D:/dev/szakdoga/szakdoga_unity
 D:/dev/szakdoga/szakdoga_unity
 Using Asset Import Pipeline V2.
@@ -27,8 +27,8 @@ Assets/models/screwdriver/Screwdriver.c4d: Unity no longer supports importing Ci
 
 Please note that FBX files exported from Cinema4D are still supported.
 
-Refreshing native plugins compatible for Editor in 64.51 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.81 ms.
+Refreshing native plugins compatible for Editor in 64.99 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.84 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/dev/szakdoga/szakdoga_unity/Assets
@@ -44,11 +44,11 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002189 seconds.
+Registered in 0.002359 seconds.
 Native extension for WindowsStandalone target not found
 Assets/models/nut_and_bolt/Bolt and Nut.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
 
@@ -58,16 +58,16 @@ Assets/models/screwdriver/Screwdriver.c4d: Unity no longer supports importing Ci
 
 Please note that FBX files exported from Cinema4D are still supported.
 
-Refreshing native plugins compatible for Editor in 56.62 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
+Refreshing native plugins compatible for Editor in 55.31 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.045 seconds
+- Completed reload, in  1.000 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004132 seconds.
+Registered in 0.004378 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.06 ms.
 [XR] OculusXRPlugin: registering subsystems
 [XR] Unable to register display lifecyle provider: [1]
@@ -75,7 +75,7 @@ Preloading 1 native plugins for Editor in 0.06 ms.
 [XR] Unable to register input lifecyle provider: [1]
 [XR] OVRP version 1.61.0
 Mono: successfully reloaded assembly
-- Completed reload, in  1.191 seconds
+- Completed reload, in  1.045 seconds
 Platform modules already initialized, skipping
 Assets/models/nut_and_bolt/Bolt and Nut.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
 
@@ -97,14 +97,14 @@ Please note that FBX files exported from Cinema4D are still supported.
 
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.82 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
+Refreshing native plugins compatible for Editor in 0.85 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Unloading 2042 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.4 MB.
+System memory in use before: 98.5 MB.
 System memory in use after: 98.5 MB.
 
 Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 2458.
-Total: 2.254900 ms (FindLiveObjects: 0.223900 ms CreateObjectMapping: 0.049600 ms MarkObjects: 1.877500 ms  DeleteObjects: 0.102200 ms)
+Total: 3.110800 ms (FindLiveObjects: 0.363500 ms CreateObjectMapping: 0.097900 ms MarkObjects: 2.531500 ms  DeleteObjects: 0.115800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -119,105 +119,42 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/models/car_set_2
-  artifactKey: Guid(7d75516db4cecca4196666af3e202cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/car_set_2 using Guid(7d75516db4cecca4196666af3e202cb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6268d62653d1f4da6d71ba3f624de2b') in 0.007665 seconds 
-  Import took 0.011472 seconds .
-
-========================================================================
-Received Prepare
-Assets/models/nut_and_bolt/Bolt and Nut.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Assets/models/screwdriver/Screwdriver.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
-
-Please note that FBX files exported from Cinema4D are still supported.
-
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 6.90 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 55.0 MB.
-System memory in use after: 55.1 MB.
-
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2458.
-Total: 2.566400 ms (FindLiveObjects: 0.273000 ms CreateObjectMapping: 0.053800 ms MarkObjects: 2.164500 ms  DeleteObjects: 0.073900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 5.075336 seconds.
-  path: Assets/models/car_set_2/Seat.fbx
-  artifactKey: Guid(0378399acc93d4340b826d6406684711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/car_set_2/Seat.fbx using Guid(0378399acc93d4340b826d6406684711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b83904701b17e9dd0a2e1c27b8af561') in 0.164786 seconds 
-  Import took 0.169082 seconds .
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f67532d8571515655dff07491122621') in 0.013505 seconds 
+  Import took 0.016812 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.748008 seconds.
-  path: Assets/models/car_seat
-  artifactKey: Guid(345ec92fadbb0054291267c7dd4fb81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/car_seat using Guid(345ec92fadbb0054291267c7dd4fb81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfaea3878e2b0ba78ec6492958c62ada') in 0.006149 seconds 
-  Import took 0.009952 seconds .
+  Time since last request: 1.641903 seconds.
+  path: Assets/Scenes/TestScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6efd3e88c7f403b0d136d45d448b5d21') in 0.007039 seconds 
+  Import took 0.010430 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000764 seconds.
-  path: Assets/models/car_seat
-  artifactKey: Guid(345ec92fadbb0054291267c7dd4fb81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/car_seat using Guid(345ec92fadbb0054291267c7dd4fb81c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfaea3878e2b0ba78ec6492958c62ada') in 0.004177 seconds 
-  Import took 0.007527 seconds .
+  Time since last request: 34.213651 seconds.
+  path: Assets/Scenes/DevScene.unity
+  artifactKey: Guid(bb7b62348a4d7de41a8a9aca95c79d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DevScene.unity using Guid(bb7b62348a4d7de41a8a9aca95c79d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56fc70815f2164c1d39f788cc9b6229c') in 0.005357 seconds 
+  Import took 0.008979 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.125307 seconds.
-  path: Assets/models/audi_r8
-  artifactKey: Guid(b952c0457e2c4c14dadbb7825b385242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/audi_r8 using Guid(b952c0457e2c4c14dadbb7825b385242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9333b5f2a32e03456c74c721ee3e039e') in 0.005178 seconds 
-  Import took 0.008526 seconds .
+  Time since last request: 59.029687 seconds.
+  path: Assets/models/SciFi Warehouse Kit/Demo/Scene/SciFi_Warehouse.unity
+  artifactKey: Guid(04ba57353b4f0284686265d3d150c23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/models/SciFi Warehouse Kit/Demo/Scene/SciFi_Warehouse.unity using Guid(04ba57353b4f0284686265d3d150c23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cdb1849db24056649d6d1d0a92c9715') in 0.016449 seconds 
+  Import took 0.020345 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.828709 seconds.
-  path: Assets/models/audi_r8/Audi R8
-  artifactKey: Guid(5cca4ec15f4d1cd4fab25e59f0d0f377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/audi_r8/Audi R8 using Guid(5cca4ec15f4d1cd4fab25e59f0d0f377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c32561b4cd5d45ffcdec6c6f7ba084d') in 0.005124 seconds 
-  Import took 0.008714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.219083 seconds.
-  path: Assets/models/audi_r8/Audi R8/Models
-  artifactKey: Guid(055a01105cfd63c408456b8ede719027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/audi_r8/Audi R8/Models using Guid(055a01105cfd63c408456b8ede719027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98c08a61e6dd729172c3bdc3fc46348') in 0.005036 seconds 
-  Import took 0.008557 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.640425 seconds.
-  path: Assets/models/audi_r8/Audi R8/Models/Audi R8.dae
-  artifactKey: Guid(95497ed627b80c84eb8b0ce771169dc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/audi_r8/Audi R8/Models/Audi R8.dae using Guid(95497ed627b80c84eb8b0ce771169dc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc4127d1d09f77a6a37304d8ceebe2c') in 0.255739 seconds 
-  Import took 0.259995 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.793067 seconds.
-  path: Assets/models/audi_r8/Audi R8/Models/Audi R8.fbx
-  artifactKey: Guid(84b0eedb32838cc49967c051dab695e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/models/audi_r8/Audi R8/Models/Audi R8.fbx using Guid(84b0eedb32838cc49967c051dab695e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029eee2da18bfa3a0f147d6623765696') in 0.326304 seconds 
-  Import took 0.331235 seconds .
+  Time since last request: 101.703108 seconds.
+  path: Assets/Scenes/DevScene.unity
+  artifactKey: Guid(bb7b62348a4d7de41a8a9aca95c79d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DevScene.unity using Guid(bb7b62348a4d7de41a8a9aca95c79d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe664c54a99d674e0156d18e1576685') in 0.005476 seconds 
+  Import took 0.009622 seconds .
 
 ========================================================================
 Received Prepare
@@ -230,23 +167,71 @@ Assets/models/screwdriver/Screwdriver.c4d: Unity no longer supports importing Ci
 Please note that FBX files exported from Cinema4D are still supported.
 
 Registering precompiled user dll's ...
-Registered in 0.005233 seconds.
+Registered in 0.004410 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.07 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.125 seconds
+- Completed reload, in  1.016 seconds
 Platform modules already initialized, skipping
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
+Refreshing native plugins compatible for Editor in 1.10 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 Unloading 1980 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.0 MB.
-System memory in use after: 98.1 MB.
+System memory in use before: 94.6 MB.
+System memory in use after: 94.7 MB.
 
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2505.
-Total: 2.558300 ms (FindLiveObjects: 0.306800 ms CreateObjectMapping: 0.053300 ms MarkObjects: 2.030400 ms  DeleteObjects: 0.165100 ms)
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2462.
+Total: 2.671100 ms (FindLiveObjects: 0.291600 ms CreateObjectMapping: 0.058900 ms MarkObjects: 2.234000 ms  DeleteObjects: 0.084800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 34.932501 seconds.
+  path: Assets/Scenes/DevScene.unity
+  artifactKey: Guid(bb7b62348a4d7de41a8a9aca95c79d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DevScene.unity using Guid(bb7b62348a4d7de41a8a9aca95c79d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c6d126885723a4d0041561d16da0aa') in 0.016325 seconds 
+  Import took 0.020468 seconds .
+
+========================================================================
+Received Prepare
+Assets/models/nut_and_bolt/Bolt and Nut.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Assets/models/screwdriver/Screwdriver.c4d: Unity no longer supports importing Cinema 4D files directly, but we're working with Maxon to make the experience better. To import Cinema 4D files, install Maxon's external importer. You can find more information on the Unity Forum: https://on.unity.com/c4d.
+
+Please note that FBX files exported from Cinema4D are still supported.
+
+Registering precompiled user dll's ...
+Registered in 0.004769 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.975 seconds
+Platform modules already initialized, skipping
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1980 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.7 MB.
+System memory in use after: 94.7 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2466.
+Total: 2.787600 ms (FindLiveObjects: 0.282000 ms CreateObjectMapping: 0.053000 ms MarkObjects: 2.372800 ms  DeleteObjects: 0.078100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
