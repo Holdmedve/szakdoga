@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - placeholder
+  - tool
+  - hand
   layers:
   - Default
   - TransparentFX

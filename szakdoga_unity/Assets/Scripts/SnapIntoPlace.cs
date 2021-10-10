@@ -4,33 +4,45 @@ using UnityEngine;
 
 public class SnapIntoPlace : MonoBehaviour
 {
-    public GameObject placeHolder;
-    public Collider snapZone;
+    public GameObject destination;
     // Start is called before the first frame update
     void Start()
     {
-        //snapZone = placeHolder.GetComponent<Collider>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void Snap()
+    void Snap(string destinationTag)
     {
-        Destroy(this.GetComponent<OVRGrabbable>());
-        Destroy(this.GetComponent<Rigidbody>());
-        this.gameObject.transform.position = placeHolder.transform.position;
-        this.gameObject.transform.rotation = placeHolder.transform.rotation;
+        this.gameObject.transform.position = destination.transform.position;
+        this.gameObject.transform.rotation = destination.transform.rotation;
 
-        Destroy(placeHolder);
+
+        if (destinationTag == Params.PlaceHolderTag)
+        {
+            Destroy(this.GetComponent<Rigidbody>());
+            Destroy(this.GetComponent<OVRGrabbable>());
+            Destroy(destination);
+        }
+        else if (destinationTag == Params.HandTag)
+        {
+            Destroy(this.GetComponent<Rigidbody>());
+            this.gameObject.transform.SetParent(destination.transform);
+        }
 
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if(other.tag == Params.PlaceHolderTag)
-            Snap();
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == Params.PlaceHolderTag || other.tag == Params.HandTag)
+            Snap(other.tag);
+
+
+
     }
 }
