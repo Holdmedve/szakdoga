@@ -15,8 +15,19 @@ public class UIhandler : MonoBehaviour
 
     void ProcessUserName()
     {
-        Debug.Log(inputField.text);
+        string user = inputField.text;
+        Debug.Log(user);
         inputField.gameObject.SetActive(false);
+
+        if (PlayerPrefs.HasKey(user))
+            Debug.Log("already have it");
+        else
+        {
+            Debug.Log("write it");
+            PlayerPrefs.SetString(user, "dummy_value");
+        }
+
+        PlayerPrefs.Save();
     }
 
     // Update is called once per frame
