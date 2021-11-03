@@ -6,35 +6,29 @@ using UnityEngine;
 public class UIhandler : MonoBehaviour
 {
     public InputField inputField;
+    PlayerScore playerScore;
+
+    bool isUsernameProcessed;
     // Start is called before the first frame update
     void Start()
     {
+        isUsernameProcessed = false;
+        playerScore = GetComponent<PlayerScore>();
         inputField.Select();
         inputField.ActivateInputField();
     }
 
-    void ProcessUserName()
-    {
-        string user = inputField.text;
-        Debug.Log(user);
-        inputField.gameObject.SetActive(false);
 
-        if (PlayerPrefs.HasKey(user))
-            Debug.Log("already have it");
-        else
-        {
-            Debug.Log("write it");
-            PlayerPrefs.SetString(user, "dummy_value");
-        }
-
-        PlayerPrefs.Save();
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-            ProcessUserName();
+        if (!isUsernameProcessed && Input.GetKeyDown(KeyCode.Return))
+        {
+            isUsernameProcessed = true;
+            playerScore.ProcessUserName(inputField.text);
+            inputField.gameObject.SetActive(false);
+        }
 
     }
 }
