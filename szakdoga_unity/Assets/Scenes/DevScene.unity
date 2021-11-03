@@ -9705,7 +9705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &397294392
 Transform:
   m_ObjectHideFlags: 0
@@ -11463,7 +11463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &475456639
 Transform:
   m_ObjectHideFlags: 0
@@ -57288,7 +57288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 219384666}
   posOffset: {x: 0, y: 0, z: 0}
-  rotOffset: {x: 90, y: 90, z: 90}
+  rotOffset: {x: 0, y: 0, z: -90}
 --- !u!65 &8506280477493275264
 BoxCollider:
   m_ObjectHideFlags: 0

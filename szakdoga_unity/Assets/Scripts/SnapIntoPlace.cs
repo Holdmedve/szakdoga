@@ -21,8 +21,9 @@ public class SnapIntoPlace : MonoBehaviour
 
     IEnumerator Snap(string destinationTag)
     {
-        this.gameObject.transform.position = destination.transform.position;
-        this.gameObject.transform.rotation = destination.transform.rotation;
+        Transform t = this.gameObject.transform;
+        t.position = destination.transform.position;
+        t.rotation = destination.transform.rotation;
 
         if (destinationTag == Params.PlaceHolderTag)
         {
@@ -33,8 +34,9 @@ public class SnapIntoPlace : MonoBehaviour
         else if (destinationTag == Params.HandTag)
         {
             Destroy(this.GetComponent<Rigidbody>());
-            this.gameObject.transform.SetParent(destination.transform);
-            StartCoroutine(RotateOffset());
+            t.SetParent(destination.transform);
+            t.localRotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
+            //StartCoroutine(RotateOffset());
             Debug.Log("asd");
         }
 
