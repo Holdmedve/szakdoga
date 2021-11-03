@@ -19,7 +19,7 @@ public class SnapIntoPlace : MonoBehaviour
 
     }
 
-    IEnumerator Snap(string destinationTag)
+    void Snap(string destinationTag)
     {
         Transform t = this.gameObject.transform;
         t.position = destination.transform.position;
@@ -36,27 +36,13 @@ public class SnapIntoPlace : MonoBehaviour
             Destroy(this.GetComponent<Rigidbody>());
             t.SetParent(destination.transform);
             t.localRotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
-            //StartCoroutine(RotateOffset());
-            Debug.Log("asd");
         }
-
-        yield return null;
     }
 
-    IEnumerator RotateOffset()
-    {
-        yield return new WaitForSeconds(1.0f);
-        Debug.Log(rotOffset);
-        this.gameObject.transform.rotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == Params.PlaceHolderTag || other.tag == Params.HandTag)
-            StartCoroutine(Snap(other.tag));
-
-
-
+            Snap(other.tag);
     }
 }
