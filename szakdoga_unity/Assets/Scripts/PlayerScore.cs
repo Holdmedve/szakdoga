@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
+
+    string firstTime = "first_time";
+    string failedSafetyInPrevious = "failed_safety_previously";
+    string notFirstTime = "not_first_time";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,16 +17,19 @@ public class PlayerScore : MonoBehaviour
 
     public void ProcessUserName(string userName)
     {
-        Debug.Log(userName);
-
         if (PlayerPrefs.HasKey(userName))
         {
-            Debug.Log("already have it");
+            if (PlayerPrefs.GetString(userName) == firstTime)
+                PlayerPrefs.SetString(userName, notFirstTime);
+            Debug.Log("already have:\t" + userName
+                + "\tvalue:\t" + PlayerPrefs.GetString(userName));
+
         }
         else
         {
-            Debug.Log("write it");
-            PlayerPrefs.SetString(userName, "dummy_value");
+            PlayerPrefs.SetString(userName, firstTime);
+            Debug.Log("write:\t" + userName + "current value:\t" +
+                PlayerPrefs.GetString(userName));
         }
 
         PlayerPrefs.Save();

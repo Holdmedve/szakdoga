@@ -14,6 +14,8 @@ public class UIhandler : MonoBehaviour
     {
         isUsernameProcessed = false;
         playerScore = GetComponent<PlayerScore>();
+
+        // cursor blinks
         inputField.Select();
         inputField.ActivateInputField();
     }
