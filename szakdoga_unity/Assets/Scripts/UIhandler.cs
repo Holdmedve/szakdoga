@@ -6,6 +6,11 @@ using UnityEngine;
 public class UIhandler : MonoBehaviour
 {
     public InputField inputField;
+    public Text taskText;
+    public GameObject taskGo;
+    public GameObject SafetyReminderGo;
+    public GameObject FirstTimeHintGo;
+    public Text FirstTimeHindText;
     PlayerScore playerScore;
 
     bool isUsernameProcessed;

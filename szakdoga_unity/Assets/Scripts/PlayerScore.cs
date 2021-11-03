@@ -4,16 +4,45 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
-
     string firstTime = "first_time";
     string failedSafetyInPrevious = "failed_safety_previously";
     string notFirstTime = "not_first_time";
+
+    float installWheelThd = 15f;
+    public float installWheelTimeSpent;
+    float tightenWheelScrewsThd = 30f;
+    public float tightenWheelScrewsTimeSpent;
+
+    string goodTime = "good";
+    string poorTime = "poor";
+    string unsatisfactoryTime = "unsatisfactory";
+    string installWheelGrade;
+    string tightenWheelScrewsGrade;
 
     // Start is called before the first frame update
     void Start()
     {
 
     }
+
+    string GradeTime(float thd, float timeSpent)
+    {
+        float f = timeSpent / thd;
+        if (f < thd * (2 / 3))
+            return goodTime;
+        else if (f <= thd)
+            return poorTime;
+        else
+            return unsatisfactoryTime;
+    }
+
+
+    public void Evaluate()
+    {
+        installWheelGrade = GradeTime(installWheelThd, installWheelTimeSpent);
+        tightenWheelScrewsGrade = GradeTime(tightenWheelScrewsThd, tightenWheelScrewsTimeSpent);
+    }
+
 
     public void ProcessUserName(string userName)
     {
