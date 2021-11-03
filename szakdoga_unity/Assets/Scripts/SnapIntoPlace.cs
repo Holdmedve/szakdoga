@@ -22,7 +22,7 @@ public class SnapIntoPlace : MonoBehaviour
     void Snap(string destinationTag)
     {
         Transform t = this.gameObject.transform;
-        t.position = destination.transform.position;
+        t.position = destination.transform.position + posOffset;
         t.rotation = destination.transform.rotation;
 
         if (destinationTag == Params.PlaceHolderTag)

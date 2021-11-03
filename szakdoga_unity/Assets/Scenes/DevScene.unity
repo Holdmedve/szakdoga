@@ -57287,7 +57287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 219384666}
-  posOffset: {x: 0, y: 0, z: 0}
+  posOffset: {x: 0, y: -0.4, z: 0.06}
   rotOffset: {x: 0, y: 0, z: -90}
 --- !u!65 &8506280477493275264
 BoxCollider:
