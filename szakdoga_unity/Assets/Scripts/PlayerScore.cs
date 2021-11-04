@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
-    string firstTime = "first_time";
-    string failedSafetyInPrevious = "failed_safety_previously";
-    string notFirstTime = "not_first_time";
+    public string firstTime = "first_time";
+    public string failedSafetyInPrevious = "failed_safety_previously";
+    public string notFirstTime = "not_first_time";
+    public string playerValue;
 
     float installWheelThd = 15f;
     public float installWheelTimeSpent;
@@ -18,11 +19,12 @@ public class PlayerScore : MonoBehaviour
     string unsatisfactoryTime = "unsatisfactory";
     string installWheelGrade;
     string tightenWheelScrewsGrade;
+    TaskManager taskManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        taskManager = GetComponent<TaskManager>();
     }
 
     string GradeTime(float thd, float timeSpent)
@@ -49,19 +51,21 @@ public class PlayerScore : MonoBehaviour
         if (PlayerPrefs.HasKey(userName))
         {
             if (PlayerPrefs.GetString(userName) == firstTime)
+            {
                 PlayerPrefs.SetString(userName, notFirstTime);
-            Debug.Log("already have:\t" + userName
-                + "\tvalue:\t" + PlayerPrefs.GetString(userName));
+                playerValue = notFirstTime;
+            }
 
         }
         else
         {
+            playerValue = firstTime;
             PlayerPrefs.SetString(userName, firstTime);
-            Debug.Log("write:\t" + userName + "current value:\t" +
-                PlayerPrefs.GetString(userName));
         }
 
         PlayerPrefs.Save();
+        taskManager.WaitForCarToStop();
+
     }
 
     // Update is called once per frame
