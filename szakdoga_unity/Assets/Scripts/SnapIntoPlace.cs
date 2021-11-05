@@ -32,7 +32,11 @@ public class SnapIntoPlace : MonoBehaviour
             Destroy(this.GetComponent<Rigidbody>());
             Destroy(this.GetComponent<OVRGrabbable>());
             Destroy(destination);
-            taskManager.EndInstallWheelTask();
+            if (!taskManager.isInstallWheelDone)
+            {
+                taskManager.isInstallWheelDone = true;
+                taskManager.EndInstallWheelTask();
+            }
         }
         else if (destinationTag == Params.HandTag)
         {

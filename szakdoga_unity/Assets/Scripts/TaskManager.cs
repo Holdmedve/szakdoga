@@ -15,6 +15,8 @@ public class TaskManager : MonoBehaviour
     PlayerScore playerScore;
     UIhandler uiHandler;
 
+    public bool isInstallWheelDone = false;
+
     public void WaitForCarToStop()
     {
         moveCar.move = true;
@@ -46,12 +48,17 @@ public class TaskManager : MonoBehaviour
         uiHandler.FirstTimeHintGo.SetActive(false);
         uiHandler.taskGo.SetActive(false);
         playerScore.installWheelTimeSpent = timePassed;
-        Debug.Log("Time spend installing wheel:\t" + timePassed);
+        Debug.Log("Time spent installing wheel:\t" + timePassed);
         StartTightenWheelScrewsTask();
     }
 
+    public GameObject activeLooseScrews;
+    public GameObject looseScrews;
     void StartTightenWheelScrewsTask()
     {
+        activeLooseScrews.gameObject.SetActive(true);
+        looseScrews.gameObject.SetActive(false);
+
         uiHandler.taskGo.SetActive(true);
         timePassed = 0f;
         uiHandler.taskText.text = tightenScrewsText;
