@@ -7,6 +7,7 @@ TagManager:
   - placeholder
   - tool
   - hand
+  - screwdriver_head
   layers:
   - Default
   - TransparentFX

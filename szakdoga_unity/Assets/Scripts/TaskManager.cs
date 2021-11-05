@@ -16,6 +16,7 @@ public class TaskManager : MonoBehaviour
     UIhandler uiHandler;
 
     public bool isInstallWheelDone = false;
+    public int tightenedScrew = 0;
 
     public void WaitForCarToStop()
     {
@@ -64,7 +65,7 @@ public class TaskManager : MonoBehaviour
         uiHandler.taskText.text = tightenScrewsText;
     }
 
-    void EndTightenWheelScrewsTask()
+    public void EndTightenWheelScrewsTask()
     {
         uiHandler.taskGo.SetActive(false);
         playerScore.tightenWheelScrewsTimeSpent = timePassed;

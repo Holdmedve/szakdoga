@@ -41,6 +41,8 @@ public class SnapIntoPlace : MonoBehaviour
         else if (destinationTag == Params.HandTag)
         {
             Destroy(this.GetComponent<Rigidbody>());
+            Destroy(this.GetComponent<BoxCollider>());
+
             t.SetParent(destination.transform);
             t.localRotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
         }
