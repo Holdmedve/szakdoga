@@ -6,7 +6,7 @@ public class TaskManager : MonoBehaviour
 {
     float timePassed = 0f;
     string installWheelText = "Install the wheel on the car.";
-    string tightenScrewsText = "Tighten the screws on the car with the screwdriver";
+    string tightenScrewsText = "Tighten the screws on the wheel with the screwdriver";
     string firstTimeMovementHint = "You can move around with the left joystick "
         + "and grab objects with the trigger buttons.";
 
@@ -41,24 +41,27 @@ public class TaskManager : MonoBehaviour
         uiHandler.taskText.text = installWheelText;
     }
 
-    void EndInstallWheelTask()
+    public void EndInstallWheelTask()
     {
         uiHandler.FirstTimeHintGo.SetActive(false);
         uiHandler.taskGo.SetActive(false);
         playerScore.installWheelTimeSpent = timePassed;
+        Debug.Log("Time spend installing wheel:\t" + timePassed);
+        StartTightenWheelScrewsTask();
     }
 
     void StartTightenWheelScrewsTask()
     {
         uiHandler.taskGo.SetActive(true);
         timePassed = 0f;
-        uiHandler.taskText.text = installWheelText;
+        uiHandler.taskText.text = tightenScrewsText;
     }
 
     void EndTightenWheelScrewsTask()
     {
         uiHandler.taskGo.SetActive(false);
         playerScore.tightenWheelScrewsTimeSpent = timePassed;
+        uiHandler.ShowResults();
     }
 
     MoveCar moveCar;
@@ -69,6 +72,12 @@ public class TaskManager : MonoBehaviour
         playerScore = GetComponent<PlayerScore>();
         uiHandler = GetComponent<UIhandler>();
 
+    }
+
+    public void RestartScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
     // Update is called once per frame

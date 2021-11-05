@@ -8,9 +8,11 @@ public class SnapIntoPlace : MonoBehaviour
     public Vector3 posOffset = new Vector3(0f, 0f, 0f);
     public Vector3 rotOffset = new Vector3(0f, 0f, 0f);
 
+    TaskManager taskManager;
     // Start is called before the first frame update
     void Start()
     {
+        taskManager = GameObject.Find("EventSystem").GetComponent<TaskManager>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class SnapIntoPlace : MonoBehaviour
             Destroy(this.GetComponent<Rigidbody>());
             Destroy(this.GetComponent<OVRGrabbable>());
             Destroy(destination);
+            taskManager.EndInstallWheelTask();
         }
         else if (destinationTag == Params.HandTag)
         {

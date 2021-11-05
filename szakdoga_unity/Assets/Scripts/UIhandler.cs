@@ -11,6 +11,10 @@ public class UIhandler : MonoBehaviour
     public GameObject SafetyReminderGo;
     public GameObject FirstTimeHintGo;
     public Text FirstTimeHindText;
+    public GameObject resultGo;
+    public Text installWheelGradeText;
+    public Text tightenScrewsGradeText;
+    public GameObject restartButtonGo;
     PlayerScore playerScore;
 
     bool isUsernameProcessed;
@@ -25,6 +29,14 @@ public class UIhandler : MonoBehaviour
         inputField.ActivateInputField();
     }
 
+    public void ShowResults()
+    {
+        restartButtonGo.SetActive(true);
+        resultGo.SetActive(true);
+        playerScore.Evaluate();
+        installWheelGradeText.text = playerScore.installWheelGrade;
+        tightenScrewsGradeText.text = playerScore.tightenWheelScrewsGrade;
+    }
 
 
     // Update is called once per frame
@@ -36,6 +48,5 @@ public class UIhandler : MonoBehaviour
             playerScore.ProcessUserName(inputField.text);
             inputField.gameObject.SetActive(false);
         }
-
     }
 }

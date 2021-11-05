@@ -17,8 +17,8 @@ public class PlayerScore : MonoBehaviour
     string goodTime = "good";
     string poorTime = "poor";
     string unsatisfactoryTime = "unsatisfactory";
-    string installWheelGrade;
-    string tightenWheelScrewsGrade;
+    public string installWheelGrade;
+    public string tightenWheelScrewsGrade;
     TaskManager taskManager;
 
     // Start is called before the first frame update
@@ -55,7 +55,6 @@ public class PlayerScore : MonoBehaviour
                 PlayerPrefs.SetString(userName, notFirstTime);
                 playerValue = notFirstTime;
             }
-
         }
         else
         {
