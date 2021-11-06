@@ -8,10 +8,12 @@ public class MoveCar : MonoBehaviour
     public bool move = false;
     public float increment = 1.0f;
     TaskManager taskManager;
+    PlayerScore playerScore;
     // Start is called before the first frame update
     void Start()
     {
         taskManager = GameObject.Find("EventSystem").GetComponent<TaskManager>();
+        playerScore = GameObject.Find("EventSystem").GetComponent<PlayerScore>();
         taskStarted = false;
     }
 
@@ -36,5 +38,17 @@ public class MoveCar : MonoBehaviour
                 taskStarted = true;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "CustomHandLeft" && taskStarted == false)
+        {
+            PlayerPrefs.SetString(playerScore.userName, playerScore.failedSafetyInPrevious);
+            PlayerPrefs.Save();
+            taskManager.RestartScene();
+            Debug.Log("hand detected");
+        }
+
     }
 }

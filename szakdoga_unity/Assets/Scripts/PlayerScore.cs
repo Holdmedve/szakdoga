@@ -46,15 +46,21 @@ public class PlayerScore : MonoBehaviour
     }
 
 
+    public string userName;
     public void ProcessUserName(string userName)
     {
+        this.userName = userName;
+
         if (PlayerPrefs.HasKey(userName))
         {
             if (PlayerPrefs.GetString(userName) == firstTime)
             {
-                PlayerPrefs.SetString(userName, notFirstTime);
                 playerValue = notFirstTime;
             }
+            else if(PlayerPrefs.GetString(userName) == failedSafetyInPrevious)
+                playerValue = failedSafetyInPrevious;
+
+            PlayerPrefs.SetString(userName, notFirstTime);
         }
         else
         {
