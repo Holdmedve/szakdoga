@@ -24,7 +24,7 @@ public class SnapIntoPlace : MonoBehaviour
     void Snap(string destinationTag)
     {
         Transform t = this.gameObject.transform;
-        t.position = destination.transform.position + posOffset;
+        t.position = destination.transform.position;
         t.rotation = destination.transform.rotation;
 
         if (destinationTag == Params.PlaceHolderTag)
@@ -44,6 +44,8 @@ public class SnapIntoPlace : MonoBehaviour
             Destroy(this.GetComponent<BoxCollider>());
 
             t.SetParent(destination.transform);
+            t.localPosition = new Vector3(0, 0, 0);
+            t.localPosition += posOffset;
             t.localRotation = Quaternion.Euler(rotOffset.x, rotOffset.y, rotOffset.z);
         }
     }
