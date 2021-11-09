@@ -30,7 +30,10 @@ public class PlayerScore : MonoBehaviour
     string GradeTime(float thd, float timeSpent)
     {
         float f = timeSpent / thd;
-        if (f < thd * (2 / 3))
+        Debug.Log("f:\t" + f);
+        Debug.Log("thd * 0.6:\t" + thd * 0.6f);
+
+        if (f < thd * 0.6f)
             return goodTime;
         else if (f <= thd)
             return poorTime;
